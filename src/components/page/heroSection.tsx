@@ -52,7 +52,7 @@ const HeroSection = () => {
                         by="word"
                         delay={2}
                     >
-                        I'm looking for a similar role as a Front-End Developer, Back-End Developer, or Full Stack Developer.
+                        I&apos;m looking for a similar role as a Front-End Developer, Back-End Developer, or Full Stack Developer.
                     </TextAnimate>
 
                     <TextAnimate
