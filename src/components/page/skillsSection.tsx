@@ -5,11 +5,40 @@ import { IconCloud } from "@/components/magicui/icon-cloud";
 import { Particles } from '@/components/magicui/particles'
 import { BlurFade } from "@/components/magicui/blur-fade";
 
-const slugs = [
-    "typescript", "javascript", "dart", "java", "react", "flutter", "android", "html5", "css3",
-    "nodedotjs", "express", "nextdotjs", "prisma", "amazonaws", "postgresql", "firebase", "nginx",
-    "vercel", "testinglibrary", "jest", "cypress", "docker", "git", "jira", "github", "gitlab",
-    "visualstudiocode", "androidstudio", "sonarqube", "figma",
+// To add a skill, add its slug (usually the lowercase name, e.g. "react", "typescript") to the array below.
+// See https://simpleicons.org/ for available slugs.
+const slugs: string[] = [
+    "html5",
+    "css3",
+    "javascript",
+    "typescript",
+    "react",
+    "nextdotjs",
+    "flutter",
+    "express",
+    "electron",
+    "tailwindcss",
+    "antdesign",
+    "daisyui",
+    "jest",
+    "postman",
+    "sonarqube",
+    "git",
+    "docker",
+    "vercel",
+    "jenkins",
+    "postgresql",
+    "firebase",
+    "prisma",
+    "supabase",
+    "kibana",
+    "figma",
+    "slack",
+    "monday",
+    "discord",
+    "drawio",
+    "lark",
+    // Add more slugs as needed
 ];
 
 // Map slugs to image URLs (e.g., from simple-icons CDN)
@@ -67,7 +96,7 @@ const SkillsSection = () => {
                             <div
                                 ref={languagesRef}
                                 className="group relative text-center p-8 rounded-2xl 
-                                         bg-gradient-to-br from-purple-900/30 via-slate-800/40 to-blue-900/30 
+                                         bg-gradient-to-br from-purple-900/50 via-slate-800/40 to-blue-900/30 
                                          backdrop-blur-lg border border-purple-500/20 
                                          shadow-2xl shadow-purple-500/10
                                          hover:shadow-purple-500/30 hover:shadow-2xl
@@ -92,7 +121,7 @@ const SkillsSection = () => {
                             <div
                                 ref={frameworksRef}
                                 className="group relative text-center p-8 rounded-2xl 
-                                         bg-gradient-to-br from-blue-900/30 via-slate-800/40 to-purple-900/30 
+                                         bg-gradient-to-br from-blue-900/40 via-slate-800/40 to-purple-900/30 
                                          backdrop-blur-lg border border-blue-500/20 
                                          shadow-2xl shadow-blue-500/10
                                          hover:shadow-blue-500/30 hover:shadow-2xl
@@ -140,7 +169,7 @@ const SkillsSection = () => {
                             <div
                                 ref={aiToolsRef}
                                 className="group relative text-center p-8 rounded-2xl 
-                                         bg-gradient-to-br from-violet-900/30 via-slate-800/40 to-blue-900/30 
+                                         bg-gradient-to-br from-violet-900/10 via-slate-800/40 to-blue-900/30 
                                          backdrop-blur-lg border border-violet-500/20 
                                          shadow-2xl shadow-violet-500/10
                                          hover:shadow-violet-500/30 hover:shadow-2xl
@@ -164,19 +193,20 @@ const SkillsSection = () => {
                     {/* Center column: Person image */}
                     <div className="flex flex-col items-center justify-center">
                         <BlurFade delay={0}>
-                            <div className="text-2xl md:text-4xl lg:text-6xl bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-bold mb-8">
+                            <div className="mb-[150px] text-2xl md:text-4xl lg:text-6xl bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-bold">
                                 Skills
                             </div>
                         </BlurFade>
                         {/* IconCloud as background */}
-                        <div className="flex flex-col items-center justify-center pointer-events-none z-0 w-[200px] h-[300px]">
+                        <div ref={personRef} className="flex flex-col items-center justify-center pointer-events-none z-0 ">
                             <IconCloud images={iconUrls} />
                         </div>
 
                         {/* Person image in foreground */}
-                        <div ref={personRef} className="flex justify-center items-center relative">
+                        {/* <div className="flex justify-center items-center relative">
                             <Image src="/person.png" alt="Person" width={170} height={170} className="z-20 drop-shadow-2xl" />
-                        </div>
+                        </div> */}
+
                     </div>
 
                     {/* Right column */}
@@ -280,14 +310,14 @@ const SkillsSection = () => {
                 </div>
 
                 {/* Animated Beams: All from personRef to each skill card */}
-                <AnimatedBeam className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={languagesRef} curvature={60} pathColor="#8b5cf6" gradientStartColor="#8b5cf6" gradientStopColor="#3b82f6" delay={0} />
-                <AnimatedBeam className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={frameworksRef} curvature={60} pathColor="#3b82f6" gradientStartColor="#3b82f6" gradientStopColor="#8b5cf6" delay={0.3} />
-                <AnimatedBeam className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={testingRef} curvature={60} pathColor="#6366f1" gradientStartColor="#6366f1" gradientStopColor="#8b5cf6" delay={0.6} />
-                <AnimatedBeam className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={aiToolsRef} curvature={60} pathColor="#8b5cf6" gradientStartColor="#8b5cf6" gradientStopColor="#3b82f6" delay={0.9} />
-                <AnimatedBeam className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={devopsRef} curvature={60} pathColor="#06b6d4" gradientStartColor="#06b6d4" gradientStopColor="#8b5cf6" delay={1.2} />
-                <AnimatedBeam className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={databasesRef} curvature={60} pathColor="#10b981" gradientStartColor="#10b981" gradientStopColor="#3b82f6" delay={1.5} />
-                <AnimatedBeam className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={designRef} curvature={60} pathColor="#f43f5e" gradientStartColor="#f43f5e" gradientStopColor="#8b5cf6" delay={1.8} />
-                <AnimatedBeam className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={softSkillsRef} curvature={60} pathColor="#f59e0b" gradientStartColor="#f59e0b" gradientStopColor="#8b5cf6" delay={2.1} />
+                <AnimatedBeam reverse={false} className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={languagesRef} curvature={60} pathColor="#8b5cf6" gradientStartColor="#8b5cf6" gradientStopColor="#3b82f6" delay={0} />
+                <AnimatedBeam reverse={false} className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={frameworksRef} curvature={60} pathColor="#3b82f6" gradientStartColor="#3b82f6" gradientStopColor="#8b5cf6" delay={0.3} />
+                <AnimatedBeam reverse={false} className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={testingRef} curvature={60} pathColor="#6366f1" gradientStartColor="#6366f1" gradientStopColor="#8b5cf6" delay={0.6} />
+                <AnimatedBeam reverse={false} className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={aiToolsRef} curvature={60} pathColor="#8b5cf6" gradientStartColor="#8b5cf6" gradientStopColor="#3b82f6" delay={0.9} />
+                <AnimatedBeam reverse={true} className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={devopsRef} curvature={60} pathColor="#06b6d4" gradientStartColor="#06b6d4" gradientStopColor="#8b5cf6" delay={1.2} />
+                <AnimatedBeam reverse={true} className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={databasesRef} curvature={60} pathColor="#10b981" gradientStartColor="#10b981" gradientStopColor="#3b82f6" delay={1.5} />
+                <AnimatedBeam reverse={true} className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={designRef} curvature={60} pathColor="#f43f5e" gradientStartColor="#f43f5e" gradientStopColor="#8b5cf6" delay={1.8} />
+                <AnimatedBeam reverse={true} className="z-10 hidden md:block" containerRef={containerRef} fromRef={personRef} toRef={softSkillsRef} curvature={60} pathColor="#f59e0b" gradientStartColor="#f59e0b" gradientStopColor="#8b5cf6" delay={2.1} />
             </div>
         </BlurFade>
     )

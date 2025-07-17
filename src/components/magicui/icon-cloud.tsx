@@ -51,8 +51,8 @@ export function IconCloud({ icons, images }: IconCloudProps) {
 
     const newIconCanvases = items.map((item, index) => {
       const offscreen = document.createElement("canvas");
-      offscreen.width = 60;
-      offscreen.height = 60;
+      offscreen.width = 50;
+      offscreen.height = 50;
       const offCtx = offscreen.getContext("2d");
 
       if (offCtx) {
@@ -166,7 +166,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
           Math.pow(targetX - currentX, 2) + Math.pow(targetY - currentY, 2),
         );
 
-        const duration = Math.min(2000, Math.max(800, distance * 1000));
+        const duration = Math.min(8000, Math.max(1200, distance * 1000));
 
         setTargetRotation({
           x: targetX,
