@@ -4,6 +4,7 @@ import HeroSection from "@/components/page/heroSection";
 import SkillsSection from "@/components/page/skillsSection";
 import ProjectSection from "@/components/page/projectSection";
 import ExperienceSection from "@/components/page/experienceSection";
+import CustomBorderBackground from "@/components/ui/custom";
 
 export default function Home() {
 
@@ -14,18 +15,23 @@ export default function Home() {
       <div className="bg-black">
         {/* section 1 */}
         <HeroSection />
+        </div>
+        <CustomBorderBackground />
 
         {/* section skills */}
         <SkillsSection />
-      </div>
+        
+        <CustomBorderBackground />
 
-      {/* section experience */}
-      <ExperienceSection />
+        {/* section experience */}
+        <ExperienceSection />
 
-      {/* section project */}
-      <ProjectSection />
+        <CustomBorderBackground />
 
-
+        {/* section project */}
+        <ProjectSection />
+     
     </div>
+
   );
 }
