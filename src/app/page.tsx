@@ -5,6 +5,7 @@ import SkillsSection from "@/components/page/skillsSection";
 import ProjectSection from "@/components/page/projectSection";
 import ExperienceSection from "@/components/page/experienceSection";
 import CustomBorderBackground from "@/components/ui/custom";
+import ContactSection from "@/components/page/contactSection";
 
 export default function Home() {
 
@@ -29,7 +30,14 @@ export default function Home() {
         <CustomBorderBackground />
 
         {/* section project */}
-        <ProjectSection />
+        <div id="projects">
+          <ProjectSection />
+        </div>
+
+        <CustomBorderBackground />
+
+        {/* section contact */}
+        <ContactSection />
      
     </div>
 

@@ -155,7 +155,7 @@ const HeroSection = () => {
 
                     <ShinyButton>
                         <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                            Projects
+                          <a href="#projects">Projects</a>  
                         </span>
                     </ShinyButton>
                 </div>

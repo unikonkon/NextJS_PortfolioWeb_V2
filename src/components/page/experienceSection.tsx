@@ -58,7 +58,7 @@ export default function ExperienceSection() {
 
       <div className="relative z-10 max-w-8xl mx-auto">
         {/* Title */}
-        <div className="text-center mb-16">
+        <div className="text-center my-16">
           <h2 
             className="text-4xl md:text-6xl font-bold mb-4"
             style={{
