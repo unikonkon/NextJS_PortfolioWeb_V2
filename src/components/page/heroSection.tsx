@@ -3,10 +3,11 @@ import { TextAnimate } from '@/components/magicui/text-animate'
 import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
 import { Terminal, TypingAnimation, AnimatedSpan } from '@/components/magicui/terminal'
 import { ShinyButton } from '@/components/magicui/shiny-button'
+import { Globe } from "@/components/magicui/globe";
 
 const HeroSection = () => {
     return (
-        <div className="flex h-full relative overflow-hidden">
+        <div className="flex h-full relative overflow-hidden pb-[100px]">
 
             <Particles
                 quantity={100}
@@ -16,6 +17,8 @@ const HeroSection = () => {
                 color="#f3f3f3"
                 className="absolute inset-0"
             />
+
+            <Globe className="mt-[300px]" />
 
             {/* Left Section - Text Animation */}
             <div className="flex-1 flex items-center justify-center sm:p-8 px-4 relative z-10">

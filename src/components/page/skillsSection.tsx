@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import Image from "next/image";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import { IconCloud } from "@/components/magicui/icon-cloud";
 import { Particles } from '@/components/magicui/particles'
