@@ -6,8 +6,17 @@ import { ShinyButton } from '@/components/magicui/shiny-button'
 import { Globe } from "@/components/magicui/globe";
 
 const HeroSection = () => {
+
+    // Smooth scroll function
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <div className="flex h-full relative overflow-hidden pb-[100px]">
+        <div className="flex h-full relative overflow-hidden pb-[100px] pt-8">
 
             <Particles
                 quantity={100}
@@ -69,19 +78,19 @@ const HeroSection = () => {
                     </TextAnimate>
 
                     <div className="flex md:hidden my-4 w-full justify-start gap-4">
-                        <ShinyButton>
+                        <ShinyButton onClick={() => window.open('https://github.com/unikonkon', '_blank')}>
                             <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                                 GitHub
                             </span>
                         </ShinyButton>
 
-                        <ShinyButton>
+                        <ShinyButton onClick={() => window.open('#', '_blank')}>
                             <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                                 Resume
                             </span>
                         </ShinyButton>
 
-                        <ShinyButton>
+                        <ShinyButton onClick={() => scrollToSection('projects')}>
                             <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                                 Projects
                             </span>
@@ -141,21 +150,21 @@ const HeroSection = () => {
 
                 </NeonGradientCard>
                 <div className="hidden md:flex mt-4 w-full justify-start gap-4">
-                    <ShinyButton>
+                    <ShinyButton onClick={() => window.open('https://github.com/unikonkon', '_blank')}>
                         <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                             GitHub
                         </span>
                     </ShinyButton>
 
-                    <ShinyButton>
+                    <ShinyButton onClick={() => window.open('#', '_blank')}>
                         <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                             Resume
                         </span>
                     </ShinyButton>
 
-                    <ShinyButton>
+                    <ShinyButton onClick={() => scrollToSection('projects')}>
                         <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                          <a href="#projects">Projects</a>  
+                            Projects
                         </span>
                     </ShinyButton>
                 </div>

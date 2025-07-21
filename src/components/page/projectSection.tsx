@@ -322,7 +322,7 @@ const ProjectSection = () => {
     if (!selectedProject || !selectedProject.slideImages) return null;
 
     return (
-      <div id="projects"
+      <div
         className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
         onClick={closeModal}
       >
@@ -427,7 +427,7 @@ const ProjectSection = () => {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto pt-[50px]">
+      <div className="relative max-w-7xl mx-auto pt-[50px] mb-20">
 
         {/* Image Modal */}
         <ImageModal />

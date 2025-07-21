@@ -88,7 +88,10 @@ const SkillsSection = () => {
                     className="absolute inset-0"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto items-center relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto items-center relative z-10 mb-20">
+                        <div className="mb-[10px] mt-[20px] w-full flex justify-center items-center md:hidden text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-bold">
+                            Skills
+                        </div>
                     {/* Left column */}
                     <div className="flex flex-col gap-8">
                         <BlurFade delay={0.1}>
@@ -192,7 +195,7 @@ const SkillsSection = () => {
                     {/* Center column: Person image */}
                     <div className="flex flex-col items-center justify-center">
                         <BlurFade delay={0}>
-                            <div className="mb-[150px] text-2xl md:text-4xl lg:text-6xl bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-bold">
+                            <div className="mb-[150px] hidden md:flex text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-bold">
                                 Skills
                             </div>
                         </BlurFade>

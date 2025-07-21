@@ -133,17 +133,17 @@ const ContactSection = () => {
         <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-blue-500/10 rounded-full blur-xl animate-pulse delay-700"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-8 py-16">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         
         {/* Header */}
         <BlurFade delay={0.1}>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <TextAnimate
-              className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 sm:mb-6"
             >
               Launch a Conversation with Me
             </TextAnimate>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl lg:max-w-3xl mx-auto px-4">
               I am always excited to work on innovative projects and collaborate with like-minded individuals. 
               Whether you have a specific project in mind or just want to discuss ideas, I love to hear from you.
             </p>
@@ -151,35 +151,35 @@ const ContactSection = () => {
         </BlurFade>
 
         {/* Contact Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start">
           
           {/* Left Side - Contact Information */}
           <BlurFade delay={0.2}>
-            <div className="space-y-8">
-              <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/20">
-                <div className="flex items-center gap-3 mb-8">
-                  <Sparkles className="w-6 h-6 text-purple-400" />
-                  <h3 className="text-2xl font-bold text-white">Connect With Me</h3>
+            <div className="space-y-6 lg:space-y-8">
+              <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-purple-500/20">
+                <div className="flex items-center gap-3 mb-6 lg:mb-8">
+                  <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">Connect With Me</h3>
                 </div>
                 
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {contactInfo.map((item, index) => (
                     <BlurFade key={index} delay={0.3 + index * 0.1}>
-                      <div className="flex items-center gap-4 p-4 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
-                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
-                          <item.icon className="w-6 h-6 text-white" />
+                      <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                        <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                          <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                         </div>
-                        <div className="flex-1">
-                          <p className="text-slate-400 text-sm">{item.label}</p>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-slate-400 text-xs sm:text-sm">{item.label}</p>
                           {item.link ? (
                             <a 
                               href={item.link}
-                              className="text-white font-medium hover:text-blue-400 transition-colors"
+                              className="text-sm sm:text-base text-white font-medium hover:text-blue-400 transition-colors break-all"
                             >
                               {item.value}
                             </a>
                           ) : (
-                            <p className="text-white font-medium">{item.value}</p>
+                            <p className="text-sm sm:text-base text-white font-medium break-all">{item.value}</p>
                           )}
                         </div>
                       </div>
@@ -190,18 +190,19 @@ const ContactSection = () => {
 
               {/* Social Links */}
               <BlurFade delay={0.5}>
-                <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/20">
-                  <h4 className="text-xl font-bold text-white mb-6">Follow My Journey</h4>
-                  <div className="flex gap-4">
+                <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-purple-500/20">
+                  <h4 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6">Follow My Journey</h4>
+                  <div className="flex flex-wrap gap-3 sm:gap-4">
                     {socialLinks.map((social, index) => (
                       <a
                         key={index}
                         href={social.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`w-12 h-12 bg-slate-800/80 rounded-lg flex items-center justify-center text-slate-400 transition-all duration-300 hover:scale-110 hover:bg-slate-700/80 ${social.color}`}
+                        className={`w-12 h-12 sm:w-14 sm:h-14 bg-slate-800/80 rounded-lg flex items-center justify-center text-slate-400 transition-all duration-300 hover:scale-110 hover:bg-slate-700/80 ${social.color}`}
+                        title={social.label}
                       >
-                        <social.icon className="w-5 h-5" />
+                        <social.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                       </a>
                     ))}
                   </div>
@@ -212,15 +213,15 @@ const ContactSection = () => {
 
           {/* Right Side - Contact Form */}
           <BlurFade delay={0.3}>
-            <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/20">
-              <div className="flex items-center gap-3 mb-8">
-                <Send className="w-6 h-6 text-blue-400" />
-                <h3 className="text-2xl font-bold text-white">Send Message to Space</h3>
+            <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-purple-500/20">
+              <div className="flex items-center gap-3 mb-6 lg:mb-8">
+                <Send className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
+                <h3 className="text-xl sm:text-2xl font-bold text-white">Send Message to Space</h3>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-slate-300 font-medium mb-2">
+                  <label htmlFor="name" className="block text-slate-300 font-medium mb-2 text-sm sm:text-base">
                     Name
                   </label>
                   <input
@@ -230,13 +231,13 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-800/80 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base bg-slate-800/80 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
                     placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-slate-300 font-medium mb-2">
+                  <label htmlFor="email" className="block text-slate-300 font-medium mb-2 text-sm sm:text-base">
                     Email
                   </label>
                   <input
@@ -246,13 +247,13 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-800/80 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base bg-slate-800/80 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
                     placeholder="your.email@example.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-slate-300 font-medium mb-2">
+                  <label htmlFor="message" className="block text-slate-300 font-medium mb-2 text-sm sm:text-base">
                     Message
                   </label>
                   <textarea
@@ -261,8 +262,8 @@ const ContactSection = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-slate-800/80 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none"
+                    rows={5}
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base bg-slate-800/80 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none"
                     placeholder="Tell me about your project or idea..."
                   />
                 </div>
@@ -270,16 +271,16 @@ const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full relative cursor-pointer rounded-lg px-6 py-3 font-medium backdrop-blur-xl border transition-shadow duration-300 ease-in-out hover:shadow bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full relative cursor-pointer rounded-lg px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium backdrop-blur-xl border transition-shadow duration-300 ease-in-out hover:shadow bg-gradient-to-r from-purple-600 to-blue-600 text-white disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center gap-2">
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                      Launching...
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <span className="text-sm sm:text-base">Launching...</span>
                     </div>
                   ) : (
                     <div className="flex items-center justify-center gap-2">
-                      🚀 Send Message to Space
+                      <span className="text-sm sm:text-base">🚀 Send Message to Space</span>
                     </div>
                   )}
                 </button>
@@ -290,23 +291,28 @@ const ContactSection = () => {
 
         {/* Footer */}
         <BlurFade delay={0.6}>
-          <footer className="mt-20 pt-12 border-t border-slate-700/50">
-            <div className="text-center space-y-4">
-              <div className="flex items-center justify-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-4 h-4 text-white" />
+          <footer className="mt-16 sm:mt-20 pt-8 sm:pt-12 border-t border-slate-700/50">
+            <div className="text-center space-y-3 sm:space-y-4">
+              <div className="flex items-center justify-center gap-2 sm:gap-3">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                  <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
-                <h4 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                <h4 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   FaradayBanana
                 </h4>
               </div>
-              <p className="text-slate-400 max-w-md mx-auto">
+              <p className="text-sm sm:text-base text-slate-400 max-w-xs sm:max-w-md mx-auto px-4">
                 Creating digital experiences in the cosmic realm
               </p>
-              <div className="flex items-center justify-center gap-8 text-sm text-slate-500">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-slate-500">
                 <p>© 2025 FaradayBanana. All rights reserved.</p>
                 <div className="flex gap-4">
-                  <a href="#" className="hover:text-purple-400 transition-colors">Up</a>
+                  <button 
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className="hover:text-purple-400 transition-colors cursor-pointer"
+                  >
+                    Back to Top
+                  </button>
                 </div>
               </div>
             </div>

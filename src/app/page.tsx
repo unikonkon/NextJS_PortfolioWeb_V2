@@ -6,40 +6,49 @@ import ProjectSection from "@/components/page/projectSection";
 import ExperienceSection from "@/components/page/experienceSection";
 import CustomBorderBackground from "@/components/ui/custom";
 import ContactSection from "@/components/page/contactSection";
+import Navbar from "@/components/page/navbar";
 
 export default function Home() {
-
-
   return (
     <div className="w-full h-screen">
+      {/* Navbar */}
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <Navbar />
+      </div>
 
       <div className="bg-black">
-        {/* section 1 */}
-        <HeroSection />
-        </div>
-        <CustomBorderBackground />
+        {/* section 1 - Hero */}
+        <section id="hero" className="pt-16">
+          <HeroSection />
+        </section>
+      </div>
+      <CustomBorderBackground />
 
-        {/* section skills */}
+      {/* section skills */}
+      <section id="skills">
         <SkillsSection />
-        
-        <CustomBorderBackground />
+      </section>
+      
+      <CustomBorderBackground />
 
-        {/* section experience */}
+      {/* section experience */}
+      <section id="experience">
         <ExperienceSection />
+      </section>
 
-        <CustomBorderBackground />
+      <CustomBorderBackground />
 
-        {/* section project */}
-        <div id="projects">
-          <ProjectSection />
-        </div>
+      {/* section project */}
+      <section id="projects">
+        <ProjectSection />
+      </section>
 
-        <CustomBorderBackground />
+      <CustomBorderBackground />
 
-        {/* section contact */}
+      {/* section contact */}
+      <section id="contact">
         <ContactSection />
-     
+      </section>
     </div>
-
   );
 }

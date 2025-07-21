@@ -56,7 +56,7 @@ export default function ExperienceSection() {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-8xl mx-auto">
+      <div className="relative z-10 max-w-8xl mx-auto mb-20">
         {/* Title */}
         <div className="text-center my-16">
           <h2 
