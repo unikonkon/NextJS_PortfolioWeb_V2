@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <div className="w-full h-screen">
       {/* Navbar */}
-      <div className="fixed top-0 left-0 right-0 z-50">
+      <div className="fixed top-0 left-0 right-0 z-50 h-[200px]">
         <Navbar />
       </div>
 
       <div className="bg-black">
         {/* section 1 - Hero */}
-        <section id="hero" className="pt-16">
+        <section id="hero">
           <HeroSection />
         </section>
       </div>
@@ -28,7 +28,7 @@ export default function Home() {
       <section id="skills">
         <SkillsSection />
       </section>
-      
+
       <CustomBorderBackground />
 
       {/* section experience */}

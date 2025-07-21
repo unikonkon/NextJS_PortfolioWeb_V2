@@ -54,7 +54,7 @@ const Navbar = () => {
 
   return (
     <BlurFade delay={0.1}>
-      <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      <nav className={`fixed top-3 mx-8 rounded-xl left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
           ? 'bg-slate-900/95 backdrop-blur-lg border-purple-500/20 shadow-lg shadow-purple-500/10' 
           : 'bg-transparent'

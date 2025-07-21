@@ -88,7 +88,7 @@ const SkillsSection = () => {
                     className="absolute inset-0"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto items-center relative z-10 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto items-center relative z-10 mb-20 mt-10">
                         <div className="mb-[10px] mt-[20px] w-full flex justify-center items-center md:hidden text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-bold">
                             Skills
                         </div>
@@ -137,7 +137,7 @@ const SkillsSection = () => {
                                         Frameworks & Libraries
                                     </p>
                                     <p className="text-sm md:text-md lg:text-lg text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                                        ReactJS, NextJS, NextUI, Flutter, Express.js, Electron, Tailwindcss, Ant Design, DaisyUI
+                                        ReactJS, NextJS, NextUI, Flutter, Express.js, Electron, Tailwindcss, Ant Design, DaisyUI, Magicui
                                     </p>
                                 </div>
                             </div>
@@ -185,7 +185,7 @@ const SkillsSection = () => {
                                         AI Tools
                                     </p>
                                     <p className="text-sm md:text-md lg:text-lg text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                                        Cursor, Blackbox.AI, Gemini, Google Gemini API, Chat GPT
+                                        Cursor, Blackbox.AI, Gemini, Google Gemini API, Chat GPT, v0.dev, lovable.dev
                                     </p>
                                 </div>
                             </div>

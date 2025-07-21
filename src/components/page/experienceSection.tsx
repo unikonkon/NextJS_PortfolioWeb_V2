@@ -89,7 +89,7 @@ export default function ExperienceSection() {
                 ></div>
                 
                 {/* Timeline Points */}
-                <div className="space-y-16 md:space-y-60">
+                <div className="space-y-16 md:space-y-64">
                   {/* First Experience Point */}
                   <div className="relative">
                     <div 

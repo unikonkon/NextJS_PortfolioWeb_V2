@@ -15,8 +15,18 @@ const HeroSection = () => {
         }
     };
 
+    // Download Resume function
+    const downloadResume = () => {
+        const link = document.createElement('a');
+        link.href = '/Resume Sutep Jantawee.pdf';
+        link.download = 'Resume_Sutep_Jantawee.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
-        <div className="flex h-full relative overflow-hidden pb-[100px] pt-8">
+        <div className="flex h-full relative overflow-hidden pb-[100px] pt-28">
 
             <Particles
                 quantity={100}
@@ -27,16 +37,16 @@ const HeroSection = () => {
                 className="absolute inset-0"
             />
 
-            <Globe className="mt-[300px]" />
-
+            <Globe className="mt-[330px]" />
+            
             {/* Left Section - Text Animation */}
-            <div className="flex-1 flex items-center justify-center sm:p-8 px-4 relative z-10">
-                <div className="max-w-2xl space-y-6">
+            <div className="flex-1 flex items-center justify-center sm:p-8 px-4 ml-3 sm:ml-6 relative z-10">
+                <div className="max-w-4xl space-y-6">
                     <TextAnimate
                         className="text-4xl font-bold text-white"
                         animation="slideUp"
                         by="word"
-                        delay={0.5}
+                        delay={0.3}
                     >
                         Hi, I am
                     </TextAnimate>
@@ -45,7 +55,7 @@ const HeroSection = () => {
                         className="text-6xl font-bold text-blue-400"
                         animation="slideUp"
                         by="word"
-                        delay={1}
+                        delay={0.5}
                     >
                         Suthep Jantawee
                     </TextAnimate>
@@ -54,7 +64,7 @@ const HeroSection = () => {
                         className="text-3xl font-semibold text-green-400"
                         animation="slideUp"
                         by="word"
-                        delay={1.5}
+                        delay={0.8}
                     >
                         Full Stack Developer
                     </TextAnimate>
@@ -63,7 +73,7 @@ const HeroSection = () => {
                         className="text-lg text-gray-300 leading-relaxed"
                         animation="slideUp"
                         by="word"
-                        delay={2}
+                        delay={1}
                     >
                         I&apos;m looking for a similar role as a Front-End Developer, Back-End Developer, or Full Stack Developer.
                     </TextAnimate>
@@ -72,7 +82,7 @@ const HeroSection = () => {
                         className="text-base text-gray-400 leading-relaxed"
                         animation="slideUp"
                         by="word"
-                        delay={2}
+                        delay={1.2}
                     >
                         I have 3+ years of experience in web development. I am passionate about building intuitive interfaces, exploring modern frameworks, and leveraging AI tools to enhance developer workflows.
                     </TextAnimate>
@@ -84,7 +94,7 @@ const HeroSection = () => {
                             </span>
                         </ShinyButton>
 
-                        <ShinyButton onClick={() => window.open('#', '_blank')}>
+                        <ShinyButton onClick={downloadResume}>
                             <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                                 Resume
                             </span>
@@ -156,7 +166,7 @@ const HeroSection = () => {
                         </span>
                     </ShinyButton>
 
-                    <ShinyButton onClick={() => window.open('#', '_blank')}>
+                    <ShinyButton onClick={downloadResume}>
                         <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                             Resume
                         </span>
