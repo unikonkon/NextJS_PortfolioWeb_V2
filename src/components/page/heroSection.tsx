@@ -4,6 +4,7 @@ import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
 import { Terminal, TypingAnimation, AnimatedSpan } from '@/components/magicui/terminal'
 import { ShinyButton } from '@/components/magicui/shiny-button'
 import { Globe } from "@/components/magicui/globe";
+import { SpaceModel } from "@/components/magicui/space-model";
 
 const HeroSection = () => {
 
@@ -36,6 +37,9 @@ const HeroSection = () => {
                 color="#f3f3f3"
                 className="absolute inset-0"
             />
+
+            {/* Three.js Space Model Background */}
+            <SpaceModel className="absolute inset-0 w-full h-full opacity-30 z-0" />
 
             <Globe className="mt-[330px]" />
             

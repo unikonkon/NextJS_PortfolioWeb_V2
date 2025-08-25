@@ -434,7 +434,7 @@ const ProjectSection = () => {
 
         {/* Header */}
         <BlurFade delay={0.1}>
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
               Projects
             </h2>
@@ -450,7 +450,7 @@ const ProjectSection = () => {
             <div className="flex bg-slate-800/50 backdrop-blur-lg rounded-2xl p-2 border border-purple-500/20">
               <button
                 onClick={() => setActiveTab('personal')}
-                className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${activeTab === 'personal'
+                className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 cursor-pointer ${activeTab === 'personal'
                   ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
                   : 'text-slate-400 hover:text-slate-200'
                   }`}
@@ -459,7 +459,7 @@ const ProjectSection = () => {
               </button>
               <button
                 onClick={() => setActiveTab('work')}
-                className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${activeTab === 'work'
+                className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 cursor-pointer ${activeTab === 'work'
                   ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
                   : 'text-slate-400 hover:text-slate-200'
                   }`}

@@ -89,9 +89,9 @@ const SkillsSection = () => {
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto items-center relative z-10 mb-20 mt-10">
-                        <div className="mb-[10px] mt-[20px] w-full flex justify-center items-center md:hidden text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-bold">
-                            Skills
-                        </div>
+                    <div className="mb-[10px] mt-[20px] w-full flex justify-center items-center md:hidden text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-bold">
+                        Skills
+                    </div>
                     {/* Left column */}
                     <div className="flex flex-col gap-8">
                         <BlurFade delay={0.1}>
@@ -185,7 +185,7 @@ const SkillsSection = () => {
                                         AI Tools
                                     </p>
                                     <p className="text-sm md:text-md lg:text-lg text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                                        Cursor, Blackbox.AI, Gemini, Google Gemini API, Chat GPT, v0.dev, lovable.dev
+                                        Cursor, Claude Code, Blackbox.AI, Gemini, Google Gemini API, Chat GPT, v0.dev, lovable.dev
                                     </p>
                                 </div>
                             </div>
