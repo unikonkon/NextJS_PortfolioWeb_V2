@@ -37,6 +37,16 @@ const slugs: string[] = [
     "discord",
     "drawio",
     "lark",
+    "threejs",
+    "magicui",
+    "heroui",
+    "cursor",
+    "claude",
+    "blackboxai",
+    "gemini",
+    "googlegeminiapi",
+    "chatgpt",
+    "nestjs",
     // Add more slugs as needed
 ];
 
@@ -137,7 +147,7 @@ const SkillsSection = () => {
                                         Frameworks & Libraries
                                     </p>
                                     <p className="text-sm md:text-md lg:text-lg text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                                        ReactJS, NextJS, NextUI, Flutter, Express.js, Electron, Tailwindcss, Ant Design, DaisyUI, Magicui
+                                        ReactJS, NextJS, Express.js, NestJS, Flutter, Electron, Tailwindcss, Ant Design, DaisyUI, Magicui, HeroUI, Three.js
                                     </p>
                                 </div>
                             </div>

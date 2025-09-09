@@ -3,7 +3,7 @@ import { BlurFade } from '@/components/magicui/blur-fade'
 import Image from 'next/image'
 import { ExternalLink, Github, X, ChevronLeft, ChevronRight } from 'lucide-react'
 
-type ColorScheme = 'orange' | 'blue' | 'yellow' | 'red' | 'green' | 'purple' | 'indigo';
+type ColorScheme = 'orange' | 'orangeLight' | 'blue' | 'yellow' | 'red' | 'green' | 'purple' | 'indigo';
 
 interface PersonalProject {
   title: string;
@@ -12,7 +12,9 @@ interface PersonalProject {
   image: string;
   slideImages?: string[]; // เพิ่ม slideImages สำหรับ modal
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
+  githubUrlFrontend?: string;
+  githubUrlBackend?: string;
   demoUrl?: string;
   featured?: boolean;
   colorScheme: ColorScheme;
@@ -65,7 +67,7 @@ const ProjectSection = () => {
 
   const nextSlide = useCallback(() => {
     if (selectedProject && selectedProject.slideImages) {
-      setCurrentSlide((prev) => 
+      setCurrentSlide((prev) =>
         prev === selectedProject.slideImages!.length - 1 ? 0 : prev + 1
       );
     }
@@ -73,7 +75,7 @@ const ProjectSection = () => {
 
   const prevSlide = useCallback(() => {
     if (selectedProject && selectedProject.slideImages) {
-      setCurrentSlide((prev) => 
+      setCurrentSlide((prev) =>
         prev === 0 ? selectedProject.slideImages!.length - 1 : prev - 1
       );
     }
@@ -107,13 +109,39 @@ const ProjectSection = () => {
   // Personal projects data
   const personalProjects: PersonalProject[] = [
     {
+      title: "📰 Crypto Sentiment Analysis",
+      role: "Full Stack Developer",
+      description: "Analyze the sentiment of cryptocurrencies using AI Gemini API to make better investment decisions. updates with RSS feeds from major crypto news sources.",
+      image: "/project/CryptoSentiment1.png",
+      slideImages: [
+        "/project/CryptoSentiment1.png",
+        "/project/CryptoSentiment2.png",
+        "/project/CryptoSentiment3.png",
+        "/project/CryptoSentiment4.png",
+        "/project/CryptoSentiment5.png",
+        "/project/CryptoSentiment6.png",
+        "/project/CryptoSentiment7.png",
+        "/project/CryptoSentiment8.png",
+        "/project/CryptoSentiment9.png",
+        "/project/CryptoSentiment10.png",
+        "/project/CryptoSentiment11.png",
+        "/project/CryptoSentiment12.png",
+      ],
+      technologies: ["Next.js", "TypeScript", "Supabase", "Google Gemini API", "TailwindCSS", "NestJS", "Three.js"],
+      githubUrlFrontend: "https://github.com/unikonkon/FrontEnd_useNestJS_CryptoSentimentAnalysis",
+      githubUrlBackend: "https://github.com/unikonkon/BackEnd_NestJS_CryptoSentimentAnalysis",
+      demoUrl: "https://crypto-sentiment-analysis-ten.vercel.app/",
+      featured: true,
+      colorScheme: "orangeLight" as const
+    },
+    {
       title: "📰 Crypto News Analysis",
       role: "Full Stack Developer",
       description: "AI-powered crypto news aggregator with sentiment analysis and trending score using Google Gemini API. Real-time updates with RSS feeds from major crypto news sources.",
       image: "/project/CryptoNews3.png",
       slideImages: [
         "/project/CryptoNews1.png",
-        "/project/CryptoNews2.png", 
+        "/project/CryptoNews2.png",
         "/project/CryptoNews3.png",
         "/project/CryptoNews4.png",
         "/project/CryptoNews5.png",
@@ -190,7 +218,7 @@ const ProjectSection = () => {
       role: "Front-End Developer",
       description: "Clean and minimalist portfolio website with responsive design principles.",
       image: "/project/project webport1.png",
-      technologies: ["Next.js", "TypeScript", "TailwindCSS"],
+      technologies: ["Next.js", "TypeScript", "TailwindCSS", "Three.js"],
       githubUrl: "https://github.com/unikonkon/NextJs_WebProtfolio",
       demoUrl: "https://faradaybanana.vercel.app/",
       colorScheme: "indigo" as const
@@ -265,11 +293,18 @@ const ProjectSection = () => {
   const getColorSchemeClasses = (colorScheme: ColorScheme) => {
     const schemes = {
       orange: {
-        gradient: "from-orange-600 to-amber-600",
+        gradient: "from-blue-600 to-cyan-600",
         border: "border-orange-500/30",
         bg: "bg-orange-900/20",
         text: "text-orange-200",
-        accent: "text-orange-400"
+        accent: "text-blue-400"
+      },
+      orangeLight: {
+        gradient: "from-blue-600 to-cyan-600",
+        border: "border-orange-500/30",
+        bg: "bg-orange-100/20",
+        text: "text-orange-500",
+        accent: "text-blue-400"
       },
       blue: {
         gradient: "from-blue-600 to-cyan-600",
@@ -279,18 +314,18 @@ const ProjectSection = () => {
         accent: "text-blue-400"
       },
       yellow: {
-        gradient: "from-yellow-600 to-orange-600",
+        gradient: "from-green-600 to-emerald-600",
         border: "border-yellow-500/30",
         bg: "bg-yellow-900/20",
         text: "text-yellow-200",
-        accent: "text-yellow-400"
+        accent: "text-green-400"
       },
       red: {
-        gradient: "from-red-600 to-pink-600",
+        gradient: "from-green-600 to-emerald-600",
         border: "border-red-500/30",
         bg: "bg-red-900/20",
         text: "text-red-200",
-        accent: "text-red-400"
+        accent: "text-green-400"
       },
       green: {
         gradient: "from-green-600 to-emerald-600",
@@ -304,14 +339,14 @@ const ProjectSection = () => {
         border: "border-purple-500/30",
         bg: "bg-purple-900/20",
         text: "text-purple-200",
-        accent: "text-purple-400"
+        accent: "text-blue-400"
       },
       indigo: {
-        gradient: "from-indigo-600 to-blue-600",
+        gradient: "from-green-600 to-emerald-600",
         border: "border-indigo-500/30",
         bg: "bg-indigo-900/20",
         text: "text-indigo-200",
-        accent: "text-indigo-400"
+        accent: "text-green-400"
       }
     };
     return schemes[colorScheme];
@@ -450,7 +485,7 @@ const ProjectSection = () => {
             <div className="flex bg-slate-800/50 backdrop-blur-lg rounded-2xl p-2 border border-purple-500/20">
               <button
                 onClick={() => setActiveTab('personal')}
-                className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 cursor-pointer ${activeTab === 'personal'
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer ${activeTab === 'personal'
                   ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
                   : 'text-slate-400 hover:text-slate-200'
                   }`}
@@ -459,7 +494,7 @@ const ProjectSection = () => {
               </button>
               <button
                 onClick={() => setActiveTab('work')}
-                className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 cursor-pointer ${activeTab === 'work'
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer ${activeTab === 'work'
                   ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
                   : 'text-slate-400 hover:text-slate-200'
                   }`}
@@ -538,28 +573,65 @@ const ProjectSection = () => {
                     </div>
 
                     {/* Project Links */}
-                    <div className="flex gap-3 mt-auto">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm"
-                      >
-                        <Github size={16} />
-                        Code
-                      </a>
-                      {project.demoUrl && (
+                    {project.githubUrl && (
+                      <div className="flex gap-3 mt-auto">
                         <a
-                          href={project.demoUrl}
+                          href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm`}
+                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm"
                         >
-                          <ExternalLink size={16} />
-                          Demo
+                          <Github size={16} />
+                          Code
                         </a>
-                      )}
-                    </div>
+                        {project.demoUrl && (
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm`}
+                          >
+                            <ExternalLink size={16} />
+                            Demo
+                          </a>
+                        )}
+                      </div>
+                    )}
+
+                    {project.githubUrlFrontend && project.githubUrlBackend && (
+                      <div className="flex gap-3 mt-auto">
+                        <a
+                          href={project.githubUrlFrontend}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm"
+                        >
+                          <Github size={16} />
+                          Frontend
+                        </a>
+                        <a
+                          href={project.githubUrlBackend}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm"
+                        >
+                          <Github size={16} />
+                          Backend
+                        </a>
+                        {project.demoUrl && (
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm`}
+                          >
+                            <ExternalLink size={16} />
+                            Demo
+                          </a>
+                        )}
+                      </div>
+                    )}
+
                   </div>
                 </BlurFade>
               );

@@ -11,12 +11,12 @@ interface SpaceModelProps {
 
 function SpaceScene() {
   const modelRef = useRef<THREE.Group>(null)
-  const gltf = useLoader(GLTFLoader, '/models/need_some_space/scene.gltf')
+  const gltf = useLoader(GLTFLoader, '/model/need_some_space1.glb')
 
   // Auto-rotate the model
   useFrame((state, delta) => {
     if (modelRef.current) {
-      modelRef.current.rotation.y += delta * 0.01
+      modelRef.current.rotation.y += delta * 0.008
     }
   })
 

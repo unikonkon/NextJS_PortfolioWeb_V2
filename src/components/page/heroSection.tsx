@@ -5,6 +5,7 @@ import { Terminal, TypingAnimation, AnimatedSpan } from '@/components/magicui/te
 import { ShinyButton } from '@/components/magicui/shiny-button'
 import { Globe } from "@/components/magicui/globe";
 import { SpaceModel } from "@/components/magicui/space-model";
+import { Highlighter } from "@/components/magicui/highlighter";
 
 const HeroSection = () => {
 
@@ -42,36 +43,43 @@ const HeroSection = () => {
             <SpaceModel className="absolute inset-0 w-full h-full opacity-30 z-0" />
 
             <Globe className="mt-[330px]" />
-            
+
             {/* Left Section - Text Animation */}
             <div className="flex-1 flex items-center justify-center sm:p-8 px-4 ml-3 sm:ml-6 relative z-10">
                 <div className="max-w-4xl space-y-6">
-                    <TextAnimate
-                        className="text-4xl font-bold text-white"
-                        animation="slideUp"
-                        by="word"
-                        delay={0.3}
-                    >
-                        Hi, I am
-                    </TextAnimate>
+                    <div className="flex justify-start">
+                        <TextAnimate
+                            className="lg:text-4xl text-xl font-bold text-white mr-4"
+                            animation="slideUp"
+                            by="word"
+                            delay={0.3}
+                        >
+                            Hi, I am
+                        </TextAnimate>
 
-                    <TextAnimate
-                        className="text-6xl font-bold text-blue-400"
-                        animation="slideUp"
-                        by="word"
-                        delay={0.5}
-                    >
-                        Suthep Jantawee
-                    </TextAnimate>
+                        <Highlighter action="underline" color="#60a5fa" strokeWidth={3} isView>
+                            <TextAnimate
+                                className="lg:text-5xl text-2xl font-bold text-blue-400"
+                                animation="slideUp"
+                                by="word"
+                                delay={0.5}
+                            >
+                                Suthep Jantawee
+                            </TextAnimate>
+                        </Highlighter>
+                    </div>
 
-                    <TextAnimate
-                        className="text-3xl font-semibold text-green-400"
-                        animation="slideUp"
-                        by="word"
-                        delay={0.8}
-                    >
-                        Full Stack Developer
-                    </TextAnimate>
+
+                    <Highlighter action="box" color="#34d399" strokeWidth={2} padding={4} isView={false}>
+                        <TextAnimate
+                            className="lg:text-3xl text-xl font-semibold text-green-400"
+                            animation="slideUp"
+                            by="word"
+                            delay={0.8}
+                        >
+                            Full Stack Developer
+                        </TextAnimate>
+                    </Highlighter>
 
                     <TextAnimate
                         className="text-lg text-gray-300 leading-relaxed"
