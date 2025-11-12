@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, X, Rocket, Code, Briefcase, Mail, Star } from 'lucide-react'
+import { Menu, X, Rocket, Code, Briefcase, Mail, Star, BookOpen } from 'lucide-react'
 import { BlurFade } from '@/components/magicui/blur-fade'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Navigation items
+  // Navigation items for sections
   const navItems = [
     { id: 'hero', label: 'Home', icon: Rocket },
     { id: 'skills', label: 'Skills', icon: Star },
     { id: 'experience', label: 'Experience', icon: Briefcase },
     { id: 'projects', label: 'Projects', icon: Code },
     { id: 'contact', label: 'Contact', icon: Mail },
+  ];
+
+  // External page link
+  const externalLinks = [
+    { href: '/knowledge', label: 'Knowledge', icon: BookOpen },
   ];
 
   // Smooth scroll to section
@@ -102,6 +108,21 @@ const Navbar = () => {
                     </button>
                   );
                 })}
+                
+                {/* External Links */}
+                {externalLinks.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 group text-slate-300 hover:text-white hover:bg-slate-800/50"
+                    >
+                      <Icon className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
+                      <span>{link.label}</span>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
 
@@ -119,7 +140,7 @@ const Navbar = () => {
           {/* Mobile Navigation */}
           <div className={`md:hidden transition-all duration-300 ease-in-out ${
             isOpen 
-              ? 'max-h-80 opacity-100 pb-4' 
+              ? 'max-h-96 opacity-100 pb-4' 
               : 'max-h-0 opacity-0 overflow-hidden'
           }`}>
             <div className="bg-slate-900/95 backdrop-blur-lg rounded-lg border border-purple-500/20 mt-2 p-2">
@@ -142,6 +163,23 @@ const Navbar = () => {
                         <div className="ml-auto w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
                       )}
                     </button>
+                  </BlurFade>
+                );
+              })}
+              
+              {/* External Links in Mobile */}
+              {externalLinks.map((link, index) => {
+                const Icon = link.icon;
+                return (
+                  <BlurFade key={link.href} delay={0.1 + (navItems.length + index) * 0.05}>
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all duration-300 text-slate-300 hover:text-white hover:bg-slate-800/50"
+                    >
+                      <Icon className="w-5 h-5 transition-transform duration-300" />
+                      <span className="font-medium">{link.label}</span>
+                    </Link>
                   </BlurFade>
                 );
               })}
