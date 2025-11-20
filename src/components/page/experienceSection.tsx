@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 export default function ExperienceSection() {
-  const [stars, setStars] = useState<Array<{id: number, left: string, top: string, size: string, color: string, delay: string, duration: string}>>([]);
+  const [stars, setStars] = useState<Array<{ id: number, left: string, top: string, size: string, color: string, delay: string, duration: string }>>([]);
 
   useEffect(() => {
     // Generate stars only on client side to prevent hydration mismatch
@@ -59,7 +59,7 @@ export default function ExperienceSection() {
       <div className="relative z-10 max-w-8xl mx-auto mb-20">
         {/* Title */}
         <div className="text-center my-16">
-          <h2 
+          <h2
             className="text-4xl md:text-6xl font-bold mb-4"
             style={{
               background: 'linear-gradient(45deg, #ffffff 0%, #00cfff 25%, #a259ff 50%, #7df9ff 75%, #ffffff 100%)',
@@ -80,19 +80,19 @@ export default function ExperienceSection() {
             <div className="sticky top-8">
               {/* Timeline Line */}
               <div className="relative">
-                <div 
+                <div
                   className="absolute left-9 top-0 bottom-0 w-0.5"
                   style={{
                     background: 'linear-gradient(180deg, #00cfff 0%, #a259ff 50%, #7df9ff 100%)',
                     boxShadow: '0 0 10px rgba(0, 207, 255, 0.5), 0 0 20px rgba(162, 89, 255, 0.3)'
                   }}
                 ></div>
-                
+
                 {/* Timeline Points */}
                 <div className="space-y-16 md:space-y-64">
                   {/* First Experience Point */}
                   <div className="relative">
-                    <div 
+                    <div
                       className="absolute left-6 w-6 h-6 rounded-full"
                       style={{
                         background: 'radial-gradient(circle, #00cfff 0%, #ffffff 50%, transparent 100%)',
@@ -101,7 +101,7 @@ export default function ExperienceSection() {
                       }}
                     ></div>
                     <div className="ml-16">
-                      <div 
+                      <div
                         className="text-lg font-semibold mb-2"
                         style={{ color: '#00cfff' }}
                       >
@@ -112,7 +112,7 @@ export default function ExperienceSection() {
 
                   {/* Second Experience Point */}
                   <div className="relative">
-                    <div 
+                    <div
                       className="absolute left-6 w-6 h-6 rounded-full mt-1"
                       style={{
                         background: 'radial-gradient(circle, #a259ff 0%, #ffffff 50%, transparent 100%)',
@@ -121,7 +121,7 @@ export default function ExperienceSection() {
                       }}
                     ></div>
                     <div className="ml-16">
-                      <div 
+                      <div
                         className="text-lg font-semibold mb-2"
                         style={{ color: '#a259ff' }}
                       >
@@ -151,16 +151,16 @@ export default function ExperienceSection() {
                   Vertobase Co., Ltd.
                 </h3>
                 <p className="text-lg mb-4 font-medium text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                  Role: Front-end Developer
+                  Product: Zignway App, Role: Front-end Developer
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
                     <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-purple-400"></span>
-                    <span>Write code front-end from design use React and NextJS</span>
+                    <span>Write front-end code from the design using React and Next.js.</span>
                   </li>
                   <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
                     <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-purple-400"></span>
-                    <span>Write code Flutter from design detail write process pin login mobile and view page other</span>
+                    <span>Write Flutter code from the design details for Zignway App, including the process for PIN login on mobile and other pages.</span>
                   </li>
                 </ul>
               </div>
@@ -187,47 +187,116 @@ export default function ExperienceSection() {
                 <ul className="space-y-2">
                   <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
                     <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Created an API for sending data using JavaScript, PostgreSQL, and Express, leveraging backend development skills in JavaScript, SQL, and Express.js.</span>
+                    <span className="font-semibold">Project: NBTC - Drone Data Transmission, Role: Backend Developer</span>
                   </li>
-                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Developed an API for fetching data from the web using JavaScript, PostgreSQL, Puppeteer and Express, utilizing knowledge of RESTful API design and SQL queries.</span>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Developed an API for transmitting drone data to both mobile and web platforms.</span>
                   </li>
-                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Built an API for retrieving data from the Kibana database, integrating database management and data analytics tools.</span>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Presented the API functionality to the client, explaining how the API works.</span>
                   </li>
-                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
+
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 mt-4">
                     <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Edited the API to send data to the homepage using React, JavaScript, PostgreSQL, and Express, combining frontend-backend integration with ReactJS and SQL.</span>
+                    <span className="font-semibold">Project: ACT, Role: Full Stack Developer</span>
                   </li>
-                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Created a process to run commands in Jenkins for data extraction using Jenkins and Docker, applying CI/CD automation practices.</span>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Updated the API for fetching data from the web and retrieving data from the Kibana database.</span>
                   </li>
-                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Edited the web front-end view for MA and fixed bugs using React, Next.js, JavaScript, and TypeScript, with UI improvements via NextUI, TailwindCSS, and Bootstrap.</span>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Updated the front-end view to display data from MA and newly integrated database sources.</span>
                   </li>
-                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Migrated Flutter code from mobile to web using Next.js and TypeScript, enhancing cross-platform development experience.</span>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Wrote Python logic for project risk assessment and Created Excel export functionality for project and company data.</span>
                   </li>
-                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Wrote unit tests for the API and applied clean code principles using Jest, Postman, and Git version control.</span>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Redesigned the data fetching flow for three web pages: EGP, DBD, and GOV.</span>
                   </li>
-                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Built the application as an Electron app for macOS and Windows, expanding deployment knowledge across desktop platforms.</span>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Updated the API for fetching data from the three web pages (EGP, DBD, GOV) based on the previous version.</span>
                   </li>
-                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
-                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Designed a data extraction flow using draw.io (Diagrams.net)</span>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Set up Jenkins processes to execute commands for fetching project and company data.</span>
                   </li>
-                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300">
+
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 mt-4">
                     <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
-                    <span>Wrote Python logic for checking MA, integrating Python scripting with backend processes.</span>
+                    <span className="font-semibold">Project: ACT Phase 2, Role: Full Stack Developer</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Designed the workflow for fetching project and company data from three web pages: EGP, DBD, and GOV.</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Developed an API to fetch project data from these web pages and store it in the database.</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Set up a Jenkins process to automate commands for fetching project and company data.</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Developed the front-end web view for Phase 2.</span>
+                  </li>
+
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 mt-4">
+                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
+                    <span className="font-semibold">Product: iApp Speech Flow for Web, Role: Full Stack Developer</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Planned the development and designed the workflow for iApp Speech Flow for Web.</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Converted mobile codebase into a web application using Next.js.</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Designed the code flow for iApp Speech Flow on the Web.</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Built the application as an Electron app targeting macOS and Windows.</span>
+                  </li>
+
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 mt-4">
+                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
+                    <span className="font-semibold">Project: iisi huboftalent, Role: Front-end Developer</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Connect the role data API from the signup process to display and edit the data in the view according to the design.</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Connect the API flow for liking profiles and viewing the data in the system according to the design.</span>
+                  </li>
+
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 mt-4">
+                    <span className="mr-2 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-400"></span>
+                    <span className="font-semibold">Project: digitaltouchpoint-wellness-chatbot, Role: Full Stack Developer</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Write an API from Next.js to retrieve, add, delete, and edit data for the signup process and add/remove package pricing information.</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Write an authentication flow to protect users using JWT for login and viewing the user signup process.</span>
+                  </li>
+                  <li className="flex items-start text-slate-300 group-hover:text-slate-200 transition-colors duration-300 ml-4">
+                    <span className="mr-2 mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-blue-300"></span>
+                    <span>Create a dashboard bot view to display package and user information.</span>
                   </li>
                 </ul>
               </div>
