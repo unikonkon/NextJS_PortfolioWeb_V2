@@ -175,6 +175,26 @@ const ProjectSection = () => {
       colorScheme: "blue" as const
     },
     {
+      title: "📋 WEB Planning Generator",
+      role: "Full Stack Developer",
+      description: "AI-powered website planning tool that generates project discovery documents and website flowcharts using Google Gemini API. Features 4-step wizard, export to PDF/Word, and Mermaid diagram generation.",
+      image: "/project/project WEB Planning1.png",
+      slideImages: [
+        "/project/project WEB Planning1.png",
+        "/project/project WEB Planning2.png",
+        "/project/project WEB Planning3.png",
+        "/project/project WEB Planning4.png",
+        "/project/project WEB Planning5.png",
+        "/project/project WEB Planning6.png",
+        "/project/project WEB Planning7.png",
+        "/project/project WEB Planning8.png"
+      ],
+      technologies: ["Next.js 15", "TypeScript", "TailwindCSS", "Google Gemini API", "Mermaid.js", "shadcn/ui", "IndexedDB"],
+      githubUrl: "https://github.com/unikonkon/NextJS_WEB_Planning_Generator",
+      demoUrl: "https://next-js-web-planning-generator.vercel.app",
+      colorScheme: "purple" as const
+    },
+    {
       title: "📈 CryptoTracker",
       role: "Front-End Developer",
       description: "Modern cryptocurrency tracking with categorized views, search functionality, and 7-day price charts.",
