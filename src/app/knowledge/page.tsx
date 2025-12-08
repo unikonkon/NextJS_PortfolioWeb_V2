@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, BookOpen, Container, ArrowRight } from "lucide-react";
+import { ArrowLeft, BookOpen, Container, ArrowRight, Code, Server } from "lucide-react";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
 interface KnowledgeCard {
@@ -28,6 +28,28 @@ const knowledgeCards: KnowledgeCard[] = [
         borderColor: "border-blue-500/20 hover:border-blue-500/40",
         iconBg: "bg-blue-500/20",
         iconColor: "text-blue-400",
+    },
+    {
+        id: "react-nextjs-hooks-guide",
+        title: "React & Next.js Hooks Guide",
+        description: "คู่มือการใช้งาน Hooks ที่นิยมใน React และ Next.js พร้อมตัวอย่างโค้ดและคำอธิบายภาษาไทย",
+        href: "/knowledge/react-nextjs-hooks-guide",
+        icon: Code,
+        gradient: "from-purple-500 to-pink-500",
+        borderColor: "border-purple-500/20 hover:border-purple-500/40",
+        iconBg: "bg-purple-500/20",
+        iconColor: "text-purple-400",
+    },
+    {
+        id: "nestjs-guide",
+        title: "NestJS Project Structure Guide",
+        description: "คู่มือโครงสร้างโปรเจค NestJS แบบละเอียด พร้อมอธิบาย Request Lifecycle และหน้าที่ของแต่ละส่วน",
+        href: "/knowledge/NestJS",
+        icon: Server,
+        gradient: "from-red-500 to-pink-500",
+        borderColor: "border-red-500/20 hover:border-red-500/40",
+        iconBg: "bg-red-500/20",
+        iconColor: "text-red-400",
     }
 ];
 
