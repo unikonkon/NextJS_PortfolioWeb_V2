@@ -15,6 +15,7 @@ interface PersonalProject {
   githubUrl?: string;
   githubUrlFrontend?: string;
   githubUrlBackend?: string;
+  githubUrlNodePullData?: string;
   demoUrl?: string;
   featured?: boolean;
   colorScheme: ColorScheme;
@@ -109,30 +110,15 @@ const ProjectSection = () => {
   // Personal projects data
   const personalProjects: PersonalProject[] = [
     {
-      title: "📰 Crypto Sentiment Analysis",
+      title: "💼 Job Matching AI",
       role: "Full Stack Developer",
-      description: "Analyze the sentiment of cryptocurrencies using AI Gemini API to make better investment decisions. updates with RSS feeds from major crypto news sources.",
-      image: "/project/CryptoSentiment1.png",
-      slideImages: [
-        "/project/CryptoSentiment1.png",
-        "/project/CryptoSentiment2.png",
-        "/project/CryptoSentiment3.png",
-        "/project/CryptoSentiment4.png",
-        "/project/CryptoSentiment5.png",
-        "/project/CryptoSentiment6.png",
-        "/project/CryptoSentiment7.png",
-        "/project/CryptoSentiment8.png",
-        "/project/CryptoSentiment9.png",
-        "/project/CryptoSentiment10.png",
-        "/project/CryptoSentiment11.png",
-        "/project/CryptoSentiment12.png",
-      ],
-      technologies: ["Next.js", "TypeScript", "Supabase", "Google Gemini API", "TailwindCSS", "NestJS", "Three.js"],
-      githubUrlFrontend: "https://github.com/unikonkon/FrontEnd_useNestJS_CryptoSentimentAnalysis",
-      githubUrlBackend: "https://github.com/unikonkon/BackEnd_NestJS_CryptoSentimentAnalysis",
-      demoUrl: "https://crypto-sentiment-analysis-ten.vercel.app/",
+      description: "AI-powered job matching application that helps job seekers find ideal roles by analyzing resumes and matching them with relevant job opportunities using RAG and vector search technology.",
+      image: "/project/JobMatching.png",
       featured: true,
-      colorScheme: "orangeLight" as const
+      technologies: ["Next.js 16", "TypeScript", "Google Gemini Pro 1.5", "RAG", "IndexedDB", "TailwindCSS", "Node.js", "ulixee"],
+      githubUrl: "https://github.com/unikonkon/NextJS_Job_MatchingAI",
+      githubUrlNodePullData: "https://github.com/unikonkon/nodeJS_JobThai_Scraper",
+      colorScheme: "indigo" as const
     },
     {
       title: "📰 Crypto News Analysis",
@@ -193,6 +179,31 @@ const ProjectSection = () => {
       githubUrl: "https://github.com/unikonkon/NextJS_WEB_Planning_Generator",
       demoUrl: "https://next-js-web-planning-generator.vercel.app",
       colorScheme: "purple" as const
+    },
+    {
+      title: "📰 Crypto Sentiment Analysis",
+      role: "Full Stack Developer",
+      description: "Analyze the sentiment of cryptocurrencies using AI Gemini API to make better investment decisions. updates with RSS feeds from major crypto news sources.",
+      image: "/project/CryptoSentiment1.png",
+      slideImages: [
+        "/project/CryptoSentiment1.png",
+        "/project/CryptoSentiment2.png",
+        "/project/CryptoSentiment3.png",
+        "/project/CryptoSentiment4.png",
+        "/project/CryptoSentiment5.png",
+        "/project/CryptoSentiment6.png",
+        "/project/CryptoSentiment7.png",
+        "/project/CryptoSentiment8.png",
+        "/project/CryptoSentiment9.png",
+        "/project/CryptoSentiment10.png",
+        "/project/CryptoSentiment11.png",
+        "/project/CryptoSentiment12.png",
+      ],
+      technologies: ["Next.js", "TypeScript", "Supabase", "Google Gemini API", "TailwindCSS", "NestJS", "Three.js"],
+      githubUrlFrontend: "https://github.com/unikonkon/FrontEnd_useNestJS_CryptoSentimentAnalysis",
+      githubUrlBackend: "https://github.com/unikonkon/BackEnd_NestJS_CryptoSentimentAnalysis",
+      demoUrl: "https://crypto-sentiment-analysis-ten.vercel.app/",
+      colorScheme: "orangeLight" as const
     },
     {
       title: "📈 CryptoTracker",
@@ -307,6 +318,31 @@ const ProjectSection = () => {
       ],
       icon: "🚁",
       colorScheme: "blue" as const
+    },
+    {
+      title: "IISI Hub of Talent",
+      role: "Front-end Developer",
+      description: "Talent recruitment platform with profile management system and role-based signup process. Features interactive profile browsing",
+      technologies: ["JavaScript", "TypeScript", "React", "GitLab", "Jenkins", "Postman"],
+      features: [
+        "Connect the role data API from the signup process to display and edit the data in the view according to the design",
+        "Connect the API flow for liking profiles and viewing the data in the system according to the design"
+      ],
+      icon: "👥",
+      colorScheme: "orange" as const
+    },
+    {
+      title: "Digital Touchpoint - Wellness Chatbot",
+      role: "Full Stack Developer",
+      description: "Wellness chatbot platform with comprehensive user management, authentication system, and package pricing dashboard. Built with Next.js and JWT authentication.",
+      technologies: ["Next.js", "TypeScript", "JWT", "GitLab", "Jenkins", "Postman", "PostgreSQL"],
+      features: [
+        "Write an API from Next.js to retrieve, add, delete, and edit data for the signup process and add/remove package pricing information",
+        "Write an authentication flow to protect users using JWT for login and viewing the user signup process",
+        "Create a dashboard bot view to display package and user information"
+      ],
+      icon: "🤖",
+      colorScheme: "indigo" as const
     }
   ];
 
@@ -604,6 +640,19 @@ const ProjectSection = () => {
                           <Github size={16} />
                           Code
                         </a>
+                        {project.githubUrlNodePullData && (
+                          <div className="flex gap-3 mt-auto">
+                            <a
+                              href={project.githubUrlNodePullData}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm"
+                            >
+                              <Github size={16} />
+                              Node Pull Data
+                            </a>
+                          </div>
+                        )}
                         {project.demoUrl && (
                           <a
                             href={project.demoUrl}
@@ -617,6 +666,8 @@ const ProjectSection = () => {
                         )}
                       </div>
                     )}
+
+
 
                     {project.githubUrlFrontend && project.githubUrlBackend && (
                       <div className="flex gap-3 mt-auto">
