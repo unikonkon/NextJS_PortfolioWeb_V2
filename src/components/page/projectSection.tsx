@@ -630,35 +630,33 @@ const ProjectSection = () => {
 
                     {/* Project Links */}
                     {project.githubUrl && (
-                      <div className="flex gap-3 mt-auto">
+                      <div className="flex flex-col sm:flex-row gap-3 mt-auto w-full">
                         <a
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button"
+                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
                         >
                           <Github size={16} />
                           Code
                         </a>
                         {project.githubUrlNodePullData && (
-                          <div className="flex gap-3 mt-auto">
-                            <a
-                              href={project.githubUrlNodePullData}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button"
-                            >
-                              <Github size={16} />
-                              Node Pull Data
-                            </a>
-                          </div>
+                          <a
+                            href={project.githubUrlNodePullData}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
+                          >
+                            <Github size={16} />
+                            Node Pull Data
+                          </a>
                         )}
                         {project.demoUrl && (
                           <a
                             href={project.demoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm`}
+                            className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm w-full sm:w-auto justify-center`}
                           >
                             <ExternalLink size={16} />
                             Demo
@@ -670,12 +668,12 @@ const ProjectSection = () => {
 
 
                     {project.githubUrlFrontend && project.githubUrlBackend && (
-                      <div className="flex gap-3 mt-auto">
+                      <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                         <a
                           href={project.githubUrlFrontend}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button"
+                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
                         >
                           <Github size={16} />
                           Frontend
@@ -684,7 +682,7 @@ const ProjectSection = () => {
                           href={project.githubUrlBackend}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button"
+                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
                         >
                           <Github size={16} />
                           Backend
@@ -694,7 +692,7 @@ const ProjectSection = () => {
                             href={project.demoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm`}
+                            className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm w-full sm:w-auto justify-center`}
                           >
                             <ExternalLink size={16} />
                             Demo
