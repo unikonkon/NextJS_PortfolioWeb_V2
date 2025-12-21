@@ -210,7 +210,7 @@ const SkillsSection = () => {
                             </div>
                         </BlurFade>
                         {/* IconCloud as background */}
-                        <div ref={personRef} className="flex flex-col items-center justify-center pointer-events-none z-0 ">
+                        <div ref={personRef} className="flex flex-col items-center justify-center pointer-events-none z-0 pixel-float parallax-medium">
                             <IconCloud images={iconUrls} />
                         </div>
 

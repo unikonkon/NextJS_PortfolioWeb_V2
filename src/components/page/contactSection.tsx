@@ -115,7 +115,7 @@ const ContactSection = () => {
         {stars.map((star) => (
           <div
             key={star.id}
-            className="absolute rounded-full animate-pulse"
+            className="absolute rounded-full sprite-blink pixel-perfect"
             style={{
               left: star.left,
               top: star.top,
@@ -156,7 +156,7 @@ const ContactSection = () => {
           {/* Left Side - Contact Information */}
           <BlurFade delay={0.2}>
             <div className="space-y-6 lg:space-y-8">
-              <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-purple-500/20">
+              <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-purple-500/20 pixel-glass pixel-stagger">
                 <div className="flex items-center gap-3 mb-6 lg:mb-8">
                   <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
                   <h3 className="text-xl sm:text-2xl font-bold text-white">Connect With Me</h3>
@@ -190,7 +190,7 @@ const ContactSection = () => {
 
               {/* Social Links */}
               <BlurFade delay={0.5}>
-                <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-purple-500/20">
+                <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-purple-500/20 pixel-glass pixel-stagger">
                   <h4 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6">Follow My Journey</h4>
                   <div className="flex flex-wrap gap-3 sm:gap-4">
                     {socialLinks.map((social, index) => (
@@ -213,7 +213,7 @@ const ContactSection = () => {
 
           {/* Right Side - Contact Form */}
           <BlurFade delay={0.3}>
-            <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-purple-500/20">
+            <div className="bg-slate-900/90 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-purple-500/20 pixel-glass pixel-stagger">
               <div className="flex items-center gap-3 mb-6 lg:mb-8">
                 <Send className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
                 <h3 className="text-xl sm:text-2xl font-bold text-white">Send Message to Space</h3>
@@ -271,7 +271,7 @@ const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full relative cursor-pointer rounded-lg px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium backdrop-blur-xl border transition-shadow duration-300 ease-in-out hover:shadow bg-gradient-to-r from-purple-600 to-blue-600 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full relative cursor-pointer rounded-lg px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium backdrop-blur-xl border transition-shadow duration-300 ease-in-out hover:shadow bg-gradient-to-r from-purple-600 to-blue-600 text-white disabled:opacity-50 disabled:cursor-not-allowed cosmic-button neon-glow"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center gap-2">

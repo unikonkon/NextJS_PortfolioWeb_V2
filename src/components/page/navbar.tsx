@@ -69,15 +69,15 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             
             {/* Logo */}
-            <div 
+            <div
               onClick={() => scrollToSection('hero')}
               className="flex items-center gap-3 cursor-pointer group"
             >
-              <div className="relative">
+              <div className="relative pixel-perfect">
                  <Image src="/person.png" alt="logo" width={30} height={30} />
                 {/* Floating particles around logo */}
-                <div className="absolute -top-1 -right-1 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-80"></div>
-                <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse opacity-60 delay-500"></div>
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-purple-400 rounded-full sprite-blink opacity-80"></div>
+                <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-blue-400 rounded-full sprite-blink opacity-60 delay-500"></div>
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent group-hover:from-purple-300 group-hover:to-blue-300 transition-all duration-300">
                 FaradayBanana
@@ -94,9 +94,9 @@ const Navbar = () => {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 group ${
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 group cosmic-button ${
                         isActive
-                          ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
+                          ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25 neon-glow'
                           : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
                       }`}
                     >

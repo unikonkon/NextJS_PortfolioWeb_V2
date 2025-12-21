@@ -42,7 +42,7 @@ export default function ExperienceSection() {
         {stars.map((star) => (
           <div
             key={star.id}
-            className="absolute rounded-full animate-pulse"
+            className="absolute rounded-full sprite-blink pixel-perfect"
             style={{
               left: star.left,
               top: star.top,
@@ -137,15 +137,16 @@ export default function ExperienceSection() {
           {/* Experience Cards Column */}
           <div className="md:col-span-3 xl:col-span-4 space-y-8">
             {/* First Experience Card */}
-            <div className="group relative p-8 rounded-2xl 
-                         bg-gradient-to-br from-purple-900/30 via-slate-800/40 to-blue-900/30 
-                         backdrop-blur-lg border border-purple-500/20 
+            <div className="group relative p-8 rounded-2xl
+                         bg-gradient-to-br from-purple-900/30 via-slate-800/40 to-blue-900/30
+                         backdrop-blur-lg border border-purple-500/20
                          shadow-2xl shadow-purple-500/10
                          hover:shadow-purple-500/30 hover:shadow-2xl
                          hover:border-purple-400/40 hover:bg-gradient-to-br hover:from-purple-800/40 hover:via-slate-700/50 hover:to-blue-800/40
                          transition-all duration-500 ease-out
                          hover:scale-101 hover:-translate-y-2
-                         before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-r before:from-purple-600/10 before:to-blue-600/10 before:opacity-0 before:transition-opacity before:duration-500 hover:before:opacity-100">
+                         before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-r before:from-purple-600/10 before:to-blue-600/10 before:opacity-0 before:transition-opacity before:duration-500 hover:before:opacity-100
+                         pixel-glass pixel-stagger neon-glow">
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-2 text-purple-200 group-hover:text-purple-100 transition-colors duration-300">
                   Vertobase Co., Ltd.
@@ -168,15 +169,16 @@ export default function ExperienceSection() {
             </div>
 
             {/* Second Experience Card */}
-            <div className="group relative p-8 rounded-2xl 
-                         bg-gradient-to-br from-blue-900/30 via-slate-800/40 to-purple-900/30 
-                         backdrop-blur-lg border border-blue-500/20 
+            <div className="group relative p-8 rounded-2xl
+                         bg-gradient-to-br from-blue-900/30 via-slate-800/40 to-purple-900/30
+                         backdrop-blur-lg border border-blue-500/20
                          shadow-2xl shadow-blue-500/10
                          hover:shadow-blue-500/30 hover:shadow-2xl
                          hover:border-blue-400/40 hover:bg-gradient-to-br hover:from-blue-800/40 hover:via-slate-700/50 hover:to-purple-800/40
                          transition-all duration-500 ease-out
                          hover:scale-101 hover:-translate-y-2
-                         before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-r before:from-blue-600/10 before:to-purple-600/10 before:opacity-0 before:transition-opacity before:duration-500 hover:before:opacity-100">
+                         before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-r before:from-blue-600/10 before:to-purple-600/10 before:opacity-0 before:transition-opacity before:duration-500 hover:before:opacity-100
+                         pixel-glass pixel-stagger neon-glow">
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-2 text-blue-200 group-hover:text-blue-100 transition-colors duration-300">
                   iApp Technology

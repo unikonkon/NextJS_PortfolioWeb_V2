@@ -504,7 +504,7 @@ const ProjectSection = () => {
         {stars.map((star) => (
           <div
             key={star.id}
-            className="absolute rounded-full animate-pulse"
+            className="absolute rounded-full sprite-blink pixel-perfect"
             style={{
               left: star.left,
               top: star.top,
@@ -541,7 +541,7 @@ const ProjectSection = () => {
             <div className="flex bg-slate-800/50 backdrop-blur-lg rounded-2xl p-2 border border-purple-500/20">
               <button
                 onClick={() => setActiveTab('personal')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer ${activeTab === 'personal'
+                className={`px-6 py-3 mr-2 rounded-lg font-semibold transition-all duration-300 cursor-pointer cosmic-button ${activeTab === 'personal'
                   ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
                   : 'text-slate-400 hover:text-slate-200'
                   }`}
@@ -550,7 +550,7 @@ const ProjectSection = () => {
               </button>
               <button
                 onClick={() => setActiveTab('work')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer ${activeTab === 'work'
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer cosmic-button ${activeTab === 'work'
                   ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
                   : 'text-slate-400 hover:text-slate-200'
                   }`}
@@ -569,7 +569,7 @@ const ProjectSection = () => {
               return (
                 <BlurFade key={project.title} delay={0.09 + index * 0.1}>
 
-                  <div className={`p-6 h-full flex flex-col bg-slate-900/90 backdrop-blur-lg rounded-lg border ${colors.border}`}>
+                  <div className={`p-6 h-full flex flex-col bg-slate-900/90 backdrop-blur-lg rounded-lg border ${colors.border} pixel-glass pixel-stagger`}>
                     {/* Project Image */}
                     <div
                       className={`relative w-full h-48 mb-4 rounded-lg overflow-hidden ${project.slideImages ? 'cursor-pointer group' : ''
@@ -635,7 +635,7 @@ const ProjectSection = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm"
+                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button"
                         >
                           <Github size={16} />
                           Code
@@ -646,7 +646,7 @@ const ProjectSection = () => {
                               href={project.githubUrlNodePullData}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm"
+                              className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button"
                             >
                               <Github size={16} />
                               Node Pull Data
@@ -675,7 +675,7 @@ const ProjectSection = () => {
                           href={project.githubUrlFrontend}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm"
+                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button"
                         >
                           <Github size={16} />
                           Frontend
@@ -684,7 +684,7 @@ const ProjectSection = () => {
                           href={project.githubUrlBackend}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm"
+                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button"
                         >
                           <Github size={16} />
                           Backend
@@ -718,7 +718,7 @@ const ProjectSection = () => {
               return (
                 <BlurFade key={project.title} delay={0.09 + index * 0.1}>
 
-                  <div className={`p-8 h-full flex flex-col bg-slate-900/90 backdrop-blur-lg rounded-lg border ${colors.border}`}>
+                  <div className={`p-8 h-full flex flex-col bg-slate-900/90 backdrop-blur-lg rounded-lg border ${colors.border} pixel-glass pixel-stagger`}>
                     {/* Project Header */}
                     <div className="flex items-start gap-4 mb-6">
                       <div className="text-4xl">{project.icon}</div>

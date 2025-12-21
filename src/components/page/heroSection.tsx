@@ -125,9 +125,9 @@ const HeroSection = () => {
             </div>
 
             {/* Right Section - Terminal */}
-            <div className="flex flex-col items-start justify-center p-8 relative z-10">
+            <div className="flex flex-col items-start justify-center p-8 relative z-10 pixel-stagger">
                 <NeonGradientCard
-                    className=" "
+                    className="pixel-glass neon-glow"
                     borderSize={0.5}
                     borderRadius={12}
                     neonColors={{
@@ -135,7 +135,7 @@ const HeroSection = () => {
                         secondColor: "#f0aaaa"
                     }}
                 >
-                    <Terminal className="w-[450px] h-[280px] bg-black/90">
+                    <Terminal className="w-[450px] h-[280px] bg-black/90 pixel-perfect">
                         <TypingAnimation className="text-white">
                             &gt; npx create-next-app@latest
                         </TypingAnimation>

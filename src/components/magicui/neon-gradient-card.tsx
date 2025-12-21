@@ -123,7 +123,7 @@ export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
         } as CSSProperties
       }
       className={cn(
-        "relative z-10 rounded-[var(--border-radius)]",
+        "relative z-10 rounded-[var(--border-radius)] pixel-perfect",
         className,
       )}
       {...props}
