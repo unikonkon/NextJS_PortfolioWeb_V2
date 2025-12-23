@@ -113,11 +113,21 @@ const ProjectSection = () => {
       title: "💼 Job Matching AI",
       role: "Full Stack Developer",
       description: "AI-powered job matching application that helps job seekers find ideal roles by analyzing resumes and matching them with relevant job opportunities using RAG and vector search technology.",
-      image: "/project/JobMatching.png",
+      image: "/project/JobMatching1.png",
+      slideImages: [
+        "/project/JobMatching1.png",
+        "/project/JobMatching2.png",
+        "/project/JobMatching3.png",
+        "/project/JobMatching4.png",
+        "/project/JobMatching5.png",
+        "/project/JobMatching6.png",
+        "/project/JobMatching7.png"
+      ],
       featured: true,
-      technologies: ["Next.js 16", "TypeScript", "Google Gemini Pro 1.5", "RAG", "IndexedDB", "TailwindCSS", "Node.js", "ulixee"],
+      technologies: ["Next.js 16", "TypeScript", "Google Gemini Pro 1.5", "RAG", "IndexedDB", "TailwindCSS", "Node.js", "ulixee", "huggingface/transformers"],
       githubUrl: "https://github.com/unikonkon/NextJS_Job_MatchingAI",
       githubUrlNodePullData: "https://github.com/unikonkon/nodeJS_JobThai_Scraper",
+      demoUrl: "https://jobmatchingai.vercel.app/",
       colorScheme: "indigo" as const
     },
     {
@@ -628,14 +638,15 @@ const ProjectSection = () => {
                       </div>
                     </div>
 
+
                     {/* Project Links */}
                     {project.githubUrl && (
-                      <div className="flex flex-col sm:flex-row gap-3 mt-auto w-full">
+                      <div className="flex flex-col sm:flex-row gap-2 mt-auto w-full">
                         <a
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
+                          className="flex items-center gap-2 px-2 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
                         >
                           <Github size={16} />
                           Code
@@ -645,7 +656,7 @@ const ProjectSection = () => {
                             href={project.githubUrlNodePullData}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
+                            className="flex items-center gap-2 px-2 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
                           >
                             <Github size={16} />
                             Node Pull Data
@@ -656,7 +667,7 @@ const ProjectSection = () => {
                             href={project.demoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm w-full sm:w-auto justify-center`}
+                            className={`flex items-center gap-2 px-2 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm w-full sm:w-auto justify-center`}
                           >
                             <ExternalLink size={16} />
                             Demo
@@ -665,15 +676,13 @@ const ProjectSection = () => {
                       </div>
                     )}
 
-
-
                     {project.githubUrlFrontend && project.githubUrlBackend && (
-                      <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+                      <div className="flex flex-col sm:flex-row gap-2 mt-auto">
                         <a
                           href={project.githubUrlFrontend}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
+                          className="flex items-center gap-2 px-2 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
                         >
                           <Github size={16} />
                           Frontend
@@ -682,7 +691,7 @@ const ProjectSection = () => {
                           href={project.githubUrlBackend}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
+                          className="flex items-center gap-2 px-2 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
                         >
                           <Github size={16} />
                           Backend
@@ -692,7 +701,7 @@ const ProjectSection = () => {
                             href={project.demoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm w-full sm:w-auto justify-center`}
+                            className={`flex items-center gap-2 px-2 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm w-full sm:w-auto justify-center`}
                           >
                             <ExternalLink size={16} />
                             Demo
@@ -716,7 +725,7 @@ const ProjectSection = () => {
               return (
                 <BlurFade key={project.title} delay={0.09 + index * 0.1}>
 
-                  <div className={`p-8 h-full flex flex-col bg-slate-900/90 backdrop-blur-lg rounded-lg border ${colors.border} pixel-glass pixel-stagger`}>
+                  <div className={`p-5 h-full flex flex-col bg-slate-900/90 backdrop-blur-lg rounded-lg border ${colors.border} pixel-glass pixel-stagger`}>
                     {/* Project Header */}
                     <div className="flex items-start gap-4 mb-6">
                       <div className="text-4xl">{project.icon}</div>
