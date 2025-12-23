@@ -172,7 +172,7 @@ const ProjectSection = () => {
     },
     {
       title: "📋 WEB Planning Generator",
-      role: "Full Stack Developer",
+      role: "Front-End Developer",
       description: "AI-powered website planning tool that generates project discovery documents and website flowcharts using Google Gemini API. Features 4-step wizard, export to PDF/Word, and Mermaid diagram generation.",
       image: "/project/project WEB Planning1.png",
       slideImages: [
@@ -356,68 +356,6 @@ const ProjectSection = () => {
     }
   ];
 
-  const getColorSchemeClasses = (colorScheme: ColorScheme) => {
-    const schemes = {
-      orange: {
-        gradient: "from-blue-600 to-cyan-600",
-        border: "border-orange-500/30",
-        bg: "bg-orange-900/20",
-        text: "text-orange-200",
-        accent: "text-blue-400"
-      },
-      orangeLight: {
-        gradient: "from-blue-600 to-cyan-600",
-        border: "border-orange-500/30",
-        bg: "bg-orange-100/20",
-        text: "text-orange-500",
-        accent: "text-blue-400"
-      },
-      blue: {
-        gradient: "from-blue-600 to-cyan-600",
-        border: "border-blue-500/30",
-        bg: "bg-blue-900/20",
-        text: "text-blue-200",
-        accent: "text-blue-400"
-      },
-      yellow: {
-        gradient: "from-green-600 to-emerald-600",
-        border: "border-yellow-500/30",
-        bg: "bg-yellow-900/20",
-        text: "text-yellow-200",
-        accent: "text-green-400"
-      },
-      red: {
-        gradient: "from-green-600 to-emerald-600",
-        border: "border-red-500/30",
-        bg: "bg-red-900/20",
-        text: "text-red-200",
-        accent: "text-green-400"
-      },
-      green: {
-        gradient: "from-green-600 to-emerald-600",
-        border: "border-green-500/30",
-        bg: "bg-green-900/20",
-        text: "text-green-200",
-        accent: "text-green-400"
-      },
-      purple: {
-        gradient: "from-purple-600 to-violet-600",
-        border: "border-purple-500/30",
-        bg: "bg-purple-900/20",
-        text: "text-purple-200",
-        accent: "text-blue-400"
-      },
-      indigo: {
-        gradient: "from-green-600 to-emerald-600",
-        border: "border-indigo-500/30",
-        bg: "bg-indigo-900/20",
-        text: "text-indigo-200",
-        accent: "text-green-400"
-      }
-    };
-    return schemes[colorScheme];
-  };
-
   // Image Modal Component
   const ImageModal = () => {
     if (!selectedProject || !selectedProject.slideImages) return null;
@@ -495,51 +433,46 @@ const ProjectSection = () => {
   };
 
   return (
-    <div className="relative min-h-screen p-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="relative min-h-screen p-10" style={{ background: 'linear-gradient(180deg, #050510 0%, #08081a 50%, #050510 100%)' }}>
 
       {/* Deep Space Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse at top, #0b0f2a 0%, #000000 50%, #0d1b2a 100%)'
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'radial-gradient(circle at 30% 20%, rgba(162, 89, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(0, 207, 255, 0.08) 0%, transparent 50%)'
+            background: 'radial-gradient(circle at 30% 20%, rgba(139, 92, 246, 0.04) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(103, 232, 249, 0.03) 0%, transparent 50%)'
           }}
         />
         {stars.map((star) => (
           <div
             key={star.id}
-            className="absolute rounded-full sprite-blink pixel-perfect"
+            className="absolute rounded-full sprite-blink"
             style={{
               left: star.left,
               top: star.top,
-              width: star.size,
-              height: star.size,
+              width: `calc(${star.size} * 0.6)`,
+              height: `calc(${star.size} * 0.6)`,
               background: star.color,
+              opacity: 0.35,
               animationDelay: star.delay,
-              animationDuration: star.duration
+              animationDuration: `calc(${star.duration} * 1.5)`
             }}
           />
         ))}
       </div>
 
-      <div className="relative max-w-7xl mx-auto pt-[50px] mb-20">
+      <div className="relative max-w-7xl mx-auto pt-[60px] mb-24">
 
         {/* Image Modal */}
         <ImageModal />
 
         {/* Header */}
         <BlurFade delay={0.1}>
-          <div className="text-center mb-8">
-            <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-6xl font-medium bg-gradient-to-r from-purple-300/90 via-cyan-300/90 to-purple-300/90 bg-clip-text text-transparent mb-6">
               Projects
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
               Explore my journey through personal experiments and professional achievements
             </p>
           </div>
@@ -547,22 +480,22 @@ const ProjectSection = () => {
 
         {/* Tab Navigation */}
         <BlurFade delay={0.2}>
-          <div className="flex justify-center mb-12">
-            <div className="flex bg-slate-800/50 backdrop-blur-lg rounded-2xl p-2 border border-purple-500/20">
+          <div className="flex justify-center mb-14">
+            <div className="flex bg-[#0a0a18]/60 backdrop-blur-xl rounded-xl p-1.5 border border-purple-500/8">
               <button
                 onClick={() => setActiveTab('personal')}
-                className={`px-6 py-3 mr-2 rounded-lg font-semibold transition-all duration-300 cursor-pointer cosmic-button ${activeTab === 'personal'
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
-                  : 'text-slate-400 hover:text-slate-200'
+                className={`px-6 py-3 mr-1 rounded-lg font-medium transition-all duration-500 cursor-pointer ${activeTab === 'personal'
+                  ? 'bg-gradient-to-r from-purple-600/80 to-cyan-600/80 text-white shadow-lg shadow-purple-500/10'
+                  : 'text-slate-400 hover:text-slate-300 hover:bg-white/5'
                   }`}
               >
                 Personal Projects
               </button>
               <button
                 onClick={() => setActiveTab('work')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer cosmic-button ${activeTab === 'work'
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
-                  : 'text-slate-400 hover:text-slate-200'
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-500 cursor-pointer ${activeTab === 'work'
+                  ? 'bg-gradient-to-r from-purple-600/80 to-cyan-600/80 text-white shadow-lg shadow-purple-500/10'
+                  : 'text-slate-400 hover:text-slate-300 hover:bg-white/5'
                   }`}
               >
                 Work Projects
@@ -575,14 +508,13 @@ const ProjectSection = () => {
         {activeTab === 'personal' && (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {personalProjects.map((project, index) => {
-              const colors = getColorSchemeClasses(project.colorScheme);
               return (
                 <BlurFade key={project.title} delay={0.09 + index * 0.1}>
 
-                  <div className={`p-6 h-full flex flex-col bg-slate-900/90 backdrop-blur-lg rounded-lg border ${colors.border} pixel-glass pixel-stagger`}>
+                  <div className={`p-6 h-full flex flex-col bg-[#0a0a18]/60 backdrop-blur-xl rounded-xl border border-purple-500/8 hover:border-purple-400/15 transition-all duration-500`}>
                     {/* Project Image */}
                     <div
-                      className={`relative w-full h-48 mb-4 rounded-lg overflow-hidden ${project.slideImages ? 'cursor-pointer group' : ''
+                      className={`relative w-full h-48 mb-5 rounded-lg overflow-hidden ${project.slideImages ? 'cursor-pointer group' : ''
                         }`}
                       onClick={() => project.slideImages && openModal(project)}
                     >
@@ -590,24 +522,24 @@ const ProjectSection = () => {
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-cover transition-transform duration-300 hover:scale-105"
+                        className="object-cover transition-transform duration-500 hover:scale-[1.03]"
                       />
                       {project.slideImages && (
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
-                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-500 flex items-center justify-center">
+                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-white/15 backdrop-blur-sm rounded-full p-3">
+                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                           </div>
                         </div>
                       )}
                       {project.featured && (
-                        <div className="absolute top-2 right-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        <div className="absolute top-2 right-2 bg-gradient-to-r from-purple-500/80 to-cyan-500/80 text-white px-2 py-1 rounded-full text-xs font-medium">
                           Featured
                         </div>
                       )}
                       {project.slideImages && (
-                        <div className="absolute bottom-2 left-2 bg-black/50 text-white px-2 py-1 rounded text-xs">
+                        <div className="absolute bottom-2 left-2 bg-black/40 text-white/90 px-2 py-1 rounded text-xs">
                           {project.slideImages.length} images
                         </div>
                       )}
@@ -615,13 +547,13 @@ const ProjectSection = () => {
 
                     {/* Project Info */}
                     <div className="flex-1">
-                      <h3 className={`text-xl font-bold mb-2 ${colors.text}`}>
+                      <h3 className="text-xl font-medium mb-2 text-slate-200">
                         {project.title}
                       </h3>
-                      <p className={`text-sm font-medium mb-3 ${colors.accent}`}>
+                      <p className="text-sm font-normal mb-4 text-purple-300/80">
                         {project.role}
                       </p>
-                      <p className="text-slate-300 text-sm mb-4 leading-relaxed">
+                      <p className="text-slate-400 text-sm mb-5 leading-relaxed">
                         {project.description}
                       </p>
 
@@ -630,7 +562,7 @@ const ProjectSection = () => {
                         {project.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className={`px-2 py-1 text-xs rounded-full ${colors.bg} ${colors.text} border ${colors.border}`}
+                            className="px-2 py-1 text-xs rounded-full bg-purple-500/10 text-purple-200/80 border border-purple-500/15"
                           >
                             {tech}
                           </span>
@@ -646,7 +578,7 @@ const ProjectSection = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-2 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
+                          className="flex items-center gap-2 px-3 py-2 bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-400/25 rounded-lg transition-all duration-500 text-sm w-full sm:w-auto justify-center"
                         >
                           <Github size={16} />
                           Code
@@ -656,10 +588,10 @@ const ProjectSection = () => {
                             href={project.githubUrlNodePullData}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-2 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
+                            className="flex items-center gap-2 px-3 py-2 bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-400/25 rounded-lg transition-all duration-500 text-sm w-full sm:w-auto justify-center"
                           >
                             <Github size={16} />
-                            Node Pull Data
+                            Node Pull Jobs
                           </a>
                         )}
                         {project.demoUrl && (
@@ -667,7 +599,7 @@ const ProjectSection = () => {
                             href={project.demoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`flex items-center gap-2 px-2 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm w-full sm:w-auto justify-center`}
+                            className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-purple-600/70 to-cyan-600/70 text-white rounded-lg hover:from-purple-600/80 hover:to-cyan-600/80 transition-all duration-500 text-sm w-full sm:w-auto justify-center"
                           >
                             <ExternalLink size={16} />
                             Demo
@@ -682,7 +614,7 @@ const ProjectSection = () => {
                           href={project.githubUrlFrontend}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-2 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
+                          className="flex items-center gap-2 px-3 py-2 bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-400/25 rounded-lg transition-all duration-500 text-sm w-full sm:w-auto justify-center"
                         >
                           <Github size={16} />
                           Frontend
@@ -691,7 +623,7 @@ const ProjectSection = () => {
                           href={project.githubUrlBackend}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-2 py-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-lg transition-colors duration-200 text-sm cosmic-button w-full sm:w-auto justify-center"
+                          className="flex items-center gap-2 px-3 py-2 bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-400/25 rounded-lg transition-all duration-500 text-sm w-full sm:w-auto justify-center"
                         >
                           <Github size={16} />
                           Backend
@@ -701,7 +633,7 @@ const ProjectSection = () => {
                             href={project.demoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`flex items-center gap-2 px-2 py-2 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm w-full sm:w-auto justify-center`}
+                            className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-purple-600/70 to-cyan-600/70 text-white rounded-lg hover:from-purple-600/80 hover:to-cyan-600/80 transition-all duration-500 text-sm w-full sm:w-auto justify-center"
                           >
                             <ExternalLink size={16} />
                             Demo
@@ -721,36 +653,35 @@ const ProjectSection = () => {
         {activeTab === 'work' && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {workProjects.map((project, index) => {
-              const colors = getColorSchemeClasses(project.colorScheme);
               return (
                 <BlurFade key={project.title} delay={0.09 + index * 0.1}>
 
-                  <div className={`p-5 h-full flex flex-col bg-slate-900/90 backdrop-blur-lg rounded-lg border ${colors.border} pixel-glass pixel-stagger`}>
+                  <div className="p-6 h-full flex flex-col bg-[#0a0a18]/60 backdrop-blur-xl rounded-xl border border-cyan-500/8 hover:border-cyan-400/15 transition-all duration-500">
                     {/* Project Header */}
                     <div className="flex items-start gap-4 mb-6">
-                      <div className="text-4xl">{project.icon}</div>
+                      <div className="text-4xl opacity-80">{project.icon}</div>
                       <div className="flex-1">
-                        <h3 className={`text-2xl font-bold mb-2 ${colors.text}`}>
+                        <h3 className="text-2xl font-medium mb-2 text-slate-200">
                           {project.title}
                         </h3>
-                        <p className={`text-lg font-medium mb-3 ${colors.accent}`}>
+                        <p className="text-lg font-normal mb-3 text-cyan-300/80">
                           {project.role}
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-slate-300 mb-6 leading-relaxed">
+                    <p className="text-slate-400 mb-6 leading-relaxed">
                       {project.description}
                     </p>
 
                     {/* Technologies */}
                     <div className="mb-6">
-                      <h4 className="text-slate-200 font-semibold mb-3">Technologies Used:</h4>
+                      <h4 className="text-slate-300 font-medium mb-3">Technologies Used:</h4>
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className={`px-3 py-1 text-sm rounded-full ${colors.bg} ${colors.text} border ${colors.border}`}
+                            className="px-3 py-1 text-sm rounded-full bg-cyan-500/10 text-cyan-200/80 border border-cyan-500/15"
                           >
                             {tech}
                           </span>
@@ -760,11 +691,11 @@ const ProjectSection = () => {
 
                     {/* Features */}
                     <div className="flex-1 mb-6">
-                      <h4 className="text-slate-200 font-semibold mb-3">Key Features & Responsibilities:</h4>
+                      <h4 className="text-slate-300 font-medium mb-3">Key Features & Responsibilities:</h4>
                       <ul className="space-y-2">
                         {project.features.map((feature, idx) => (
-                          <li key={idx} className="text-slate-300 text-sm flex items-start gap-2">
-                            <span className={`w-1.5 h-1.5 rounded-full ${colors.bg} ${colors.border} border mt-2 flex-shrink-0`}></span>
+                          <li key={idx} className="text-slate-400 text-sm flex items-start gap-2">
+                            <span className="w-1 h-1 rounded-full bg-cyan-400/50 mt-2 flex-shrink-0"></span>
                             <span>{feature}</span>
                           </li>
                         ))}
@@ -778,7 +709,7 @@ const ProjectSection = () => {
                           href={project.demoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${colors.gradient} text-white rounded-lg hover:opacity-90 transition-opacity duration-200`}
+                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-600/70 to-cyan-600/70 text-white rounded-lg hover:from-purple-600/80 hover:to-cyan-600/80 transition-all duration-500"
                         >
                           <ExternalLink size={18} />
                           View Project
