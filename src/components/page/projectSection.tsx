@@ -226,6 +226,21 @@ const ProjectSection = () => {
       colorScheme: "yellow" as const
     },
     {
+      title: "🌐 HTML Fetcher",
+      role: "Front-End Developer",
+      description: "Web application for fetching and processing HTML content from URLs. Built with Next.js and TypeScript for efficient web scraping and content extraction.",
+      image: "/project/project HTMLFetcher1.png",
+      slideImages: [
+        "/project/project HTMLFetcher1.png",
+        "/project/project HTMLFetcher2.png",
+        "/project/project HTMLFetcher3.png",
+      ],
+      technologies: ["Next.js", "TypeScript", "TailwindCSS"],
+      githubUrl: "https://github.com/unikonkon/NextJS_HTML_Fetcher",
+      demoUrl: "https://html-fetcher-blush.vercel.app/",
+      colorScheme: "blue" as const
+    },
+    {
       title: "🎬 Netflix Clone",
       role: "Front-End Developer",
       description: "Responsive Netflix clone with modern UI/UX, movie browsing, and server-side rendering.",
